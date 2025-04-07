@@ -26,6 +26,8 @@ You can also click the closing curly brace of any rule to bring up a text box on
 ## Conditions in JS:
 1. You can use { } to include the codes or not inside the ifs, however it's recommanded you use them.
    ![if conditions in JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
+   https://javascript.info/while-for
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 
 ### Mini Notes
 - Every variable you can use in JS is stored inside an object named ```window```. In the browser console you can access that but in the terminal you have to type the word: ```global``` 😃
