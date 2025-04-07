@@ -23,6 +23,10 @@ Click a property name or value to bring up a text box, where you can key in a ne
 Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the dev tools to jump to show it in its own view, where it can generally be edited and saved.
 You can also click the closing curly brace of any rule to bring up a text box on a new line, where you can write a completely new declaration for your page.
 
+## Conditions in JS:
+1. You can use { } to include the codes or not inside the ifs, however it's recommanded you use them.
+   ![if conditions in JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
+
 ### Mini Notes
 - Every variable you can use in JS is stored inside an object named ```window```. In the browser console you can access that but in the terminal you have to type the word: ```global``` 😃
 - What does ```nvm``` stands for?
