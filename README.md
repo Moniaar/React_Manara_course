@@ -25,6 +25,19 @@ You can also click the closing curly brace of any rule to bring up a text box on
 
 ## Conditions in JS:
 1. You can use { } to include the codes or not inside the ifs, however it's recommanded you use them.
+2. A single execution of the loop body is called an iteration.
+3. Curly braces are not required for a single-line body.
+4. What is “inline” variable declaration?: it is variables that are visible only inside the loop.
+5. You can do this in JS:
+```
+let i = 0;
+
+for (; i < 3;) {
+  alert( i++ );
+}
+```
+6. You can use breaks in JS too.
+7. Continue: It doesn’t stop the whole loop. Instead, it stops the current iteration and forces the loop to start a new one (if the condition allows).
    ![if conditions in JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
    https://javascript.info/while-for
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
