@@ -1,5 +1,5 @@
-# React_Manara_course
-This repository holds everything I am learning with Manara courses
+# Frontend Engineering with React
+This repository holds everything I am learning with Manara courses, specfically the Frontend Engineering with React Course notes.
 
 ## Intresting things about JS
 1. First version of JS was named MOCHA and it was very basic Java and had a special syntax, with some of recent JS features like: first class functions & dynamic typing and prototype inheritance.
