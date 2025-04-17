@@ -63,6 +63,7 @@ outer: for (let i = 0; i < 3; i++) {
 alert('Done!');
 ```
 But keep in mind Labels do not allow to “jump” anywhere.
+
 10. break/continue support labels before the loop. A label is the only way for break/continue to escape a nested loop to go to an outer one.
    ![if conditions in JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
    https://javascript.info/while-for
