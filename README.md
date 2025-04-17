@@ -38,6 +38,32 @@ for (; i < 3;) {
 ```
 6. You can use breaks in JS too.
 7. Continue: It doesn’t stop the whole loop. Instead, it stops the current iteration and forces the loop to start a new one (if the condition allows).
+8. ``` (i > 5) ? alert(i) : continue; ``` : continue isn't allowed here.
+9. Labels: A label is an identifier with a colon before a loop:
+```
+labelName: for (...) {
+  ...
+}
+```
+The break <labelName> statement in the loop below breaks out to the label:
+```
+outer: for (let i = 0; i < 3; i++) {
+
+  for (let j = 0; j < 3; j++) {
+
+    let input = prompt(`Value at coords (${i},${j})`, '');
+
+    // if an empty string or canceled, then break out of both loops
+    if (!input) break outer; // (*)
+
+    // do something with the value...
+  }
+}
+
+alert('Done!');
+```
+But keep in mind Labels do not allow to “jump” anywhere.
+10. break/continue support labels before the loop. A label is the only way for break/continue to escape a nested loop to go to an outer one.
    ![if conditions in JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
    https://javascript.info/while-for
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
