@@ -64,10 +64,35 @@ alert('Done!');
 ```
 But keep in mind Labels do not allow to “jump” anywhere.
 
-10. break/continue support labels before the loop. A label is the only way for break/continue to escape a nested loop to go to an outer one.
-   ![if conditions in JS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
-   https://javascript.info/while-for
-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+10. Break/continue support labels before the loop. A label is the only way for break/continue to escape a nested loop to go to an outer one.
+11. Some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the DOM) is easier via recursion.
+
+## Functions:
+1. When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function. Same rule applies to Arrays.
+2. Function declarations and expressions can be nested, which forms a scope chain:
+  ```
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+```
+4. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces.
+  ```
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
+
+console.log(factorial(3)); // 6
+```
+6. In JavaScript, a function can be defined based on a condition.
+7. You can also use the Function constructor to create functions from a string at runtime, much like eval().
+8. A method is a function that is a property of an object.
+9. It turns out that functions are themselves objects — and in turn, these objects have methods, The call() and apply() methods can be used to achieve this goal.
+10. In JS it doesn't matter where you add the function declaration, the interpreter will always put those at top level of the code, and this is what we call function Hoisting.
+11. Function hoisting only works with function declarations — not with function expressions.
+12. It is possible to convert any recursive algorithm to a non-recursive one, but the logic is often much more complex, and doing so requires the use of a stack.
 
 ### Mini Notes
 - Every variable you can use in JS is stored inside an object named ```window```. In the browser console you can access that but in the terminal you have to type the word: ```global``` 😃
