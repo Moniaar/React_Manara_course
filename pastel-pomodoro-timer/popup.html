@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Pomodoro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        /* Custom font for a softer feel */
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 320px; /* Typical extension popup width */
+            min-height: 400px;
+        }
+        .timer-pulse {
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(1.02); opacity: 0.95; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-rose-100 via-orange-100 to-amber-100 text-slate-700 flex flex-col items-center justify-center p-6 transition-colors duration-500">
+
+    <div id="app-container" class="w-full max-w-xs text-center">
+        <h1 class="text-3xl font-light mb-6 text-rose-500">Pomodoro</h1>
+
+        <div id="timer-display-container" class="mb-8">
+            <div id="timer-display" class="text-7xl font-thin text-rose-600 tracking-wider p-4 rounded-lg shadow-inner bg-white/50">
+                25:00
+            </div>
+            <div id="current-mode-display" class="text-sm text-rose-400 mt-2">Focus Time</div>
+        </div>
+
+        <div id="mode-buttons" class="flex justify-around mb-8 space-x-2">
+            <button id="pomodoroBtn" data-mode="pomodoro" data-time="25" class="mode-btn flex-1 py-2 px-3 bg-rose-300 hover:bg-rose-400 text-white rounded-lg shadow transition-all duration-200 ease-in-out transform hover:scale-105 text-sm">
+                Pomodoro
+            </button>
+            <button id="shortBreakBtn" data-mode="shortBreak" data-time="5" class="mode-btn flex-1 py-2 px-3 bg-amber-300 hover:bg-amber-400 text-white rounded-lg shadow transition-all duration-200 ease-in-out transform hover:scale-105 text-sm">
+                Short Break
+            </button>
+            <button id="longBreakBtn" data-mode="longBreak" data-time="15" class="mode-btn flex-1 py-2 px-3 bg-orange-300 hover:bg-orange-400 text-white rounded-lg shadow transition-all duration-200 ease-in-out transform hover:scale-105 text-sm">
+                Long Break
+            </button>
+        </div>
+
+        <div id="control-buttons" class="flex flex-col space-y-3">
+            <button id="startBtn" class="w-full py-3 bg-emerald-400 hover:bg-emerald-500 text-white rounded-lg shadow-md text-lg font-semibold transition-all duration-200 ease-in-out transform hover:scale-105">
+                Start
+            </button>
+            <button id="pauseBtn" class="w-full py-3 bg-yellow-400 hover:bg-yellow-500 text-white rounded-lg shadow-md text-lg font-semibold transition-all duration-200 ease-in-out transform hover:scale-105 hidden">
+                Pause
+            </button>
+            <button id="resetBtn" class="w-full py-3 bg-red-400 hover:bg-red-500 text-white rounded-lg shadow-md text-lg font-semibold transition-all duration-200 ease-in-out transform hover:scale-105">
+                Reset
+            </button>
+        </div>
+
+        <div id="message-box" class="mt-4 p-3 text-sm text-center rounded-lg hidden"></div>
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
