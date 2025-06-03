@@ -1,0 +1,56 @@
+/* popup.css */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 320px; /* Standard extension popup width */
+    /* min-height is set inline for now, can be moved here */
+    /* The gradient is applied via Tailwind in popup.html */
+    /* transition-colors is also applied inline for the body */
+}
+
+/* Active mode button style */
+.mode-btn.active {
+    background-color: #fb7185; /* rose-500 */
+    box-shadow: 0 0 10px rgba(251, 113, 133, 0.7); /* Softer shadow for active state */
+    transform: scale(1.05);
+}
+
+/* Timer display animation when active */
+#timer-display-container.timer-active #timer-display {
+    animation: gentlePulse 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes gentlePulse {
+    0% {
+        transform: scale(1);
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+    100% {
+        transform: scale(1.01);
+        box-shadow: inset 0 0 10px rgba(236, 72, 153, 0.2); /* rose-500 with alpha */
+    }
+}
+
+/* Styling for custom message box if needed beyond Tailwind */
+#message-box.success {
+    background-color: #d1fae5; /* Tailwind green-100 */
+    color: #065f46; /* Tailwind green-800 */
+    border: 1px solid #6ee7b7; /* Tailwind green-300 */
+}
+
+#message-box.error {
+    background-color: #fee2e2; /* Tailwind red-100 */
+    color: #991b1b; /* Tailwind red-800 */
+    border: 1px solid #fca5a5; /* Tailwind red-300 */
+}
+
+/* Ensure buttons have good tap targets and visual feedback */
+button {
+    cursor: pointer;
+    outline: none; /* Remove default outline, rely on Tailwind focus styles */
+}
+
+button:focus-visible { /* Modern focus styling */
+    ring: 2px;
+    ring-offset: 2px;
+    /* Tailwind provides focus:ring-color, e.g., focus:ring-rose-500 */
+}
