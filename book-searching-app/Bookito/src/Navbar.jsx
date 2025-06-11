@@ -4,7 +4,6 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <p> testing if this works </p>
         <a href="/">MyApp</a>
       </div>
       <ul className="navbar__links">
