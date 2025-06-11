@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
 
 // It keeps the application state even though the source code changes.
 // The application itself
-reloads, but not the page.
+// reloads, but not the page.
 if (model.hot) {
-  model.hot.accpet ;
+  model.hot.accpet();
 }
