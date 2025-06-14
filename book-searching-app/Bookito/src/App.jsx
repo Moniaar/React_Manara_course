@@ -25,9 +25,10 @@ class User {
   getName() {
     return this.name + ' is ' + this.age + ' years old';
   }
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   var hello = ' sir you fine? ';
   const user = new User('Omnia', 25);
   console.log(user.getName());
